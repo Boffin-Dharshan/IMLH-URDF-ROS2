@@ -16,7 +16,7 @@ This project presents the URDF model of a **Pick-and-Place Robot** integrated wi
 
 ## 📁 Project Structure
 
----
+IMLH-URDF/ ├── urdf/ │ ├── imlh_robot.urdf.xacro │ └── meshes/ ├── launch/ │ └── display.launch.py ├── rviz/ │ └── imlh_config.rviz ├── package.xml ├── CMakeLists.txt └── README.md
 
 ## 🧠 Technologies Used
 
