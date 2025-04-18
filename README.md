@@ -16,3 +16,20 @@ This project presents the URDF model of a **Pick-and-Place Robot** integrated wi
 
 ## 📁 Project Structure
 
+---
+
+## 🧠 Technologies Used
+
+- **ROS2 (Robot Operating System)**
+- **URDF/Xacro**
+- **RViz for visualization**
+- **Linux (Ubuntu recommended)**
+
+---
+
+## 📦 How to Use
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/IMLH-Pick-and-Place.git
+
