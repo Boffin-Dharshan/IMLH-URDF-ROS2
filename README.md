@@ -1,2 +1,2 @@
-# IMLH-URDF-ROS2
-URDF model of a pick-and-place robot with a wheeled base and robotic arm, developed as part of the IMLH project. Designed for ROS2 simulation and visualization in RViz and Gazebo.
+# IMLH-Pick-and-Place-Robot
+URDF model of an Integrated Multi Load Handler (IMLH) robot with a robotic arm and wheeled platform for pick-and-place operations in ROS2
