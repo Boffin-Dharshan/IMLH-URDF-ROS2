@@ -45,7 +45,7 @@ PickAndPlace-WheeledRobot-URDF/
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/IMLH-Pick-and-Place.git
+   [git clone https://github.com/yourusername/IMLH-Pick-and-Place.git](https://github.com/Boffin-Dharshan/IMLH-URDF-ROS2.git)
 
 ## 🧠 How to Use
 
