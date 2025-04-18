@@ -47,3 +47,9 @@ PickAndPlace-WheeledRobot-URDF/
    ```bash
    git clone https://github.com/yourusername/IMLH-Pick-and-Place.git
 
+## 🧠 How to Use
+
+ **Source your ROS2 workspace:**
+   ```bash
+   source /opt/ros/humble/setup.bash
+
