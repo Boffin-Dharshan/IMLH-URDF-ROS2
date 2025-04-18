@@ -1,0 +1,307 @@
+<?xml version="1.0" ?>
+<robot name="hope" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find hope_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find hope_description)/urdf/hope.trans" />
+<xacro:include filename="$(find hope_description)/urdf/hope.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.0012994966403905295 0.003443235869906314 0.05531645540346945" rpy="0 0 0"/>
+    <mass value="28.068772046282348"/>
+    <inertia ixx="0.069479" iyy="0.228422" izz="0.267087" ixy="0.0" iyz="-0.0" ixz="0.001603"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hope_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hope_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_wheel_front_1">
+  <inertial>
+    <origin xyz="1.5265940261910416e-08 -0.019812713828790365 -3.7120307092713967e-07" rpy="0 0 0"/>
+    <mass value="1.1006928877887447"/>
+    <inertia ixx="0.000655" iyy="0.001237" izz="0.000655" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.092597 0.071557 -0.047502" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hope_description)/meshes/left_wheel_front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.092597 0.071557 -0.047502" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hope_description)/meshes/left_wheel_front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_wheel_back_1">
+  <inertial>
+    <origin xyz="1.1812489889018174e-08 -0.01981271382879035 6.229975563210033e-10" rpy="0 0 0"/>
+    <mass value="1.1006928877887447"/>
+    <inertia ixx="0.000655" iyy="0.001237" izz="0.000655" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.097737 0.071557 -0.0475" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hope_description)/meshes/left_wheel_back_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.097737 0.071557 -0.0475" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hope_description)/meshes/left_wheel_back_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_wheel_front_1">
+  <inertial>
+    <origin xyz="1.5463430758089203e-08 0.019813185568603023 -3.7120307059407276e-07" rpy="0 0 0"/>
+    <mass value="1.1006928877887447"/>
+    <inertia ixx="0.000655" iyy="0.001237" izz="0.000655" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.092597 -0.078443 -0.047502" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hope_description)/meshes/right_wheel_front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.092597 -0.078443 -0.047502" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hope_description)/meshes/right_wheel_front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_wheel_back_1">
+  <inertial>
+    <origin xyz="1.2009979871718812e-08 0.019813185568602912 6.229979032656985e-10" rpy="0 0 0"/>
+    <mass value="1.1006928877887447"/>
+    <inertia ixx="0.000655" iyy="0.001237" izz="0.000655" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.097737 -0.078443 -0.0475" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hope_description)/meshes/right_wheel_back_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.097737 -0.078443 -0.0475" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hope_description)/meshes/right_wheel_back_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="store_link_1">
+  <inertial>
+    <origin xyz="1.1911234859551811e-08 2.3586990621597692e-07 0.011691770679077854" rpy="0 0 0"/>
+    <mass value="0.5937111999999989"/>
+    <inertia ixx="0.001051" iyy="0.001884" izz="0.00274" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.052737 -0.003443 -0.09" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hope_description)/meshes/store_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.052737 -0.003443 -0.09" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hope_description)/meshes/store_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="base_arm_link_1">
+  <inertial>
+    <origin xyz="1.7104321481803408e-06 -5.251717020668487e-06 0.009205002758533962" rpy="0 0 0"/>
+    <mass value="0.38706566227732825"/>
+    <inertia ixx="0.000128" iyy="0.000127" izz="0.00019" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.092263 -0.003443 -0.09" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hope_description)/meshes/base_arm_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.092263 -0.003443 -0.09" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hope_description)/meshes/base_arm_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shoulder_link_1">
+  <inertial>
+    <origin xyz="-0.031477684070447154 0.017278205097870186 0.023608539169756554" rpy="0 0 0"/>
+    <mass value="0.3589028614117094"/>
+    <inertia ixx="0.000139" iyy="0.000349" izz="0.000224" ixy="2e-06" iyz="-2e-06" ixz="0.000145"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.092226 -0.013418 -0.115764" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hope_description)/meshes/shoulder_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.092226 -0.013418 -0.115764" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hope_description)/meshes/shoulder_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="elbow_link_1">
+  <inertial>
+    <origin xyz="-0.027718787818495738 -0.007507195641945368 4.959545387706044e-07" rpy="0 0 0"/>
+    <mass value="0.26962845556589415"/>
+    <inertia ixx="2.4e-05" iyy="0.00017" izz="0.000155" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.156226 -0.021418 -0.163764" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hope_description)/meshes/elbow_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.156226 -0.021418 -0.163764" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hope_description)/meshes/elbow_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wrist_link_1">
+  <inertial>
+    <origin xyz="-0.0004781950578354177 -1.2270162885238273e-06 4.959545412686062e-07" rpy="0 0 0"/>
+    <mass value="0.038025234439684065"/>
+    <inertia ixx="3e-06" iyy="2e-06" izz="3e-06" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.216226 -0.013918 -0.163764" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hope_description)/meshes/wrist_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.216226 -0.013918 -0.163764" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hope_description)/meshes/wrist_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper_link_1">
+  <inertial>
+    <origin xyz="-0.03242610110651717 -0.010999764130088779 4.959545413518729e-07" rpy="0 0 0"/>
+    <mass value="0.35508762871337324"/>
+    <inertia ixx="9.7e-05" iyy="0.000142" izz="0.000226" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.23085 -0.024918 -0.163764" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hope_description)/meshes/gripper_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.23085 -0.024918 -0.163764" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hope_description)/meshes/gripper_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="joint_left_front" type="continuous">
+  <origin xyz="-0.092597 -0.071557 0.047502" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_wheel_front_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="joint_left_back" type="continuous">
+  <origin xyz="0.097737 -0.071557 0.0475" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_wheel_back_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="joint_right_front" type="continuous">
+  <origin xyz="-0.092597 0.078443 0.047502" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_wheel_front_1"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="joint_right_back" type="continuous">
+  <origin xyz="0.097737 0.078443 0.0475" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_wheel_back_1"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="joint_store" type="fixed">
+  <origin xyz="0.052737 0.003443 0.09" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="store_link_1"/>
+</joint>
+
+<joint name="joint_base_arm" type="continuous">
+  <origin xyz="-0.092263 0.003443 0.09" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="base_arm_link_1"/>
+  <axis xyz="-0.0 -0.0 1.0"/>
+</joint>
+
+<joint name="joint_shoulder" type="continuous">
+  <origin xyz="3.7e-05 0.009975 0.025764" rpy="0 0 0"/>
+  <parent link="base_arm_link_1"/>
+  <child link="shoulder_link_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="joint_elbow" type="continuous">
+  <origin xyz="-0.064 0.008 0.048" rpy="0 0 0"/>
+  <parent link="shoulder_link_1"/>
+  <child link="elbow_link_1"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="joint_wrist" type="continuous">
+  <origin xyz="-0.06 -0.0075 0.0" rpy="0 0 0"/>
+  <parent link="elbow_link_1"/>
+  <child link="wrist_link_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="joint_gripper" type="continuous">
+  <origin xyz="-0.014624 0.011 0.0" rpy="0 0 0"/>
+  <parent link="wrist_link_1"/>
+  <child link="gripper_link_1"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+</joint>
+
+</robot>
