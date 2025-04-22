@@ -14,24 +14,6 @@ This project presents the URDF model of a **Pick-and-Place Robot** integrated wi
 
 ---
 
-## 📁 Project Structure
-
-PickAndPlace-WheeledRobot-URDF/
-├── urdf/
-│   ├── pick_and_place_robot.xacro
-│   ├── pick_and_place_robot.urdf
-│   └── meshes/
-│       └── [robot part meshes - STL/DAE files]
-├── launch/
-│   └── display.launch.py
-├── rviz/
-│   └── config.rviz
-├── package.xml
-├── CMakeLists.txt
-├── LICENSE
-└── README.md
-
-
 ## 🧠 Technologies Used
 
 - **ROS2 (Robot Operating System)**
